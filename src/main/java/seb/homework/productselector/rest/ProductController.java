@@ -1,21 +1,19 @@
 package seb.homework.productselector.rest;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import seb.homework.productselector.core.product.CustomerInfoDto;
-import seb.homework.productselector.core.product.verifier.ProductFinder;
-import org.springframework.ui.Model;
+import seb.homework.productselector.core.verifier.ProductsSelectionAdviser;
 
 import java.util.List;
 
 @RestController
 public class ProductController {
 
-   private final ProductFinder productFinder;
+   private final ProductsSelectionAdviser productFinder;
 
-   public ProductController(ProductFinder productFinder) {
+   public ProductController(ProductsSelectionAdviser productFinder) {
       this.productFinder = productFinder;
    }
 

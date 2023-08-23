@@ -10,9 +10,9 @@ public class SpringJdbcConfig {
    public DataSource mysqlDataSource() {
       DriverManagerDataSource dataSource = new DriverManagerDataSource();
       dataSource.setDriverClassName("org.h2.Driver");
-      dataSource.setUrl("jdbc:h2:mem:test");
-      dataSource.setUsername("ruggero");
-      dataSource.setPassword("montesi");
+      dataSource.setUrl("spring.datasource.url");
+      dataSource.setUsername("spring.datasource.username");
+      dataSource.setPassword("spring.datasource.password");
 
       return dataSource;
    }

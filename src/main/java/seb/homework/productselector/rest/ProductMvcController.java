@@ -5,7 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import seb.homework.productselector.core.product.CustomerInfoDto;
-import seb.homework.productselector.core.product.verifier.ProductFinder;
+import seb.homework.productselector.core.verifier.ProductsSelectionAdviser;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ import java.util.List;
 @Controller
 public class ProductMvcController {
 
-   private final ProductFinder productFinder;
+   private final ProductsSelectionAdviser productFinder;
 
-   public ProductMvcController(ProductFinder productFinder) {
+   public ProductMvcController(ProductsSelectionAdviser productFinder) {
       this.productFinder = productFinder;
    }
 

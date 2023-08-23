@@ -2,6 +2,7 @@ package seb.homework.productselector.core.product;
 
 import lombok.Builder;
 import lombok.Data;
+import seb.homework.productselector.core.product.find.FindProductDto;
 
 @Builder
 @Data
@@ -35,5 +36,17 @@ public class Product implements ProductSuitabilityUseCase{
 
    private boolean checkStudentCondition(boolean isStudent) {
       return mustBeStudent == null || mustBeStudent == isStudent;
+   }
+
+   public static Product from(FindProductDto dto) {
+      return Product.builder()
+            .name(dto.getName())
+            .minAge(dto.getMinAge())
+            .maxAge(dto.getMaxAge())
+            .minIncome(dto.getMinIncome())
+            .maxIncome(dto.getMaxIncome())
+            .mustBeStudent(dto.getMustBeStudent())
+            .build();
+
    }
 }
