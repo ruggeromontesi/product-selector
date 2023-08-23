@@ -5,6 +5,22 @@
    <title>Title</title>
 </head>
 <body>
-
+<div>
+   <table>
+      <thead>
+      <tr>
+         <th>Product</th>
+      </tr>
+      </thead>
+      <tr th:each="product : ${products}">
+         <td th:text="${product}"></td>
+      </tr>
+   </table>
+</div>
+<br>
+<br>
+<a th:href="@{/form}">
+   Go to product selector
+</a>
 </body>
 </html>

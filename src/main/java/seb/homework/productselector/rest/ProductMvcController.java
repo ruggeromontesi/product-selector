@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import seb.homework.productselector.core.product.CustomerInfoDto;
 import seb.homework.productselector.core.product.verifier.ProductFinder;
 
+import java.util.List;
+
 
 @Controller
 public class ProductMvcController {
@@ -29,8 +31,9 @@ public class ProductMvcController {
 
    @PostMapping("/products/recommend")
    public String recommend(Model model, CustomerInfoDto customer) {
-      var a = productFinder.getProducts(customer);
-      return "redirect:/books";
+      List<String> suitableProducts = productFinder.getProducts(customer);
+      model.addAttribute("products", suitableProducts);
+      return "recommendedProducts";
    }
 
 
