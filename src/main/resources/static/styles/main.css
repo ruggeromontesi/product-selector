@@ -1,0 +1,45 @@
+body {
+   background-image: url("static/image/SEB_logo.png");
+}
+
+
+form {
+   display: table;
+   background-color: #def3ff;
+   border-radius: 5px;
+
+}
+
+p {
+   display: table-row;
+}
+
+label {
+   display: table-cell;
+   margin-left: 20px;
+   padding-left: 10px;
+   font-size: 1.15rem;
+}
+
+input {
+   display: table-cell;
+}
+
+select, option {
+   width: 12rem;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   margin-left: 15px;
+   font-size: 1.15rem;
+
+}
+
+.submit-button {
+   width: 10rem;
+   position: relative;
+   left: 10%;
+   display: table-row;
+   background-color: lavender;
+   font-size: 1.15rem;
+}
+

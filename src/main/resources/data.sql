@@ -15,7 +15,7 @@ INSERT INTO product( name, min_age, max_age, min_income, max_income, must_be_stu
 VALUES ( 'Current Account', 17, null, 0, null, false),
        ( 'Current Account Plus', 17, null, 40000, null, false),
        ( 'Junior Saver Account', null, 18, null, null, false),
-       ( 'Student Account', null, 17, null, null, true),
+       ( 'Student Account', 17, null, null, null, true),
        ( 'Senior Account', 64, null, null, null, false),
        ( 'Debit Card', 17, null, null, 12001, false),
        ( 'Credit Card', 17, null, 12000, null, false),

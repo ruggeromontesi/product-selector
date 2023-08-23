@@ -5,51 +5,9 @@
 <head>
    <meta charset="UTF-8">
    <title>Customer form</title>
+   <link th:href="@{styles/main.css}" rel="stylesheet"/>
 </head>
-<style>
-   form {
-      display: table;
-      background-color: #def3ff;
-      border-radius: 5px;
-
-   }
-
-   p {
-      display: table-row;
-   }
-
-   label {
-      display: table-cell;
-      margin-left: 20px;
-      padding-left: 10px;
-      font-size: 1.15rem;
-   }
-
-   input {
-      display: table-cell;
-   }
-
-   select, option {
-      width: 10rem;
-      margin-bottom: 20px;
-      margin-top: 20px;
-      margin-left: 15px;
-      font-size: 1.15rem;
-
-   }
-
-   .submit-button {
-      width: 10rem;
-      position: relative;
-      left: 10%;
-      display: table-row;
-      background-color: lavender;
-      font-size: 1.15rem;
-   }
-
-
-</style>
-<body>
+<body th:style="'background: url(/static/image/SEB_logo.png)'">
 <h2>Customer form</h2>
 <form id="customer-form"
       th:object="${customer}"
@@ -57,17 +15,17 @@
       method="post">
    <p><label for="income">Choose your income:</label>
       <select th:field="${customer.income}" name="income" id="income">
-         <option th:value=0>0</option>
-         <option th:value=10000>1-12000</option>
-         <option th:value=20000>12001-40000</option>
-         <option th:value=40001>More than 40000</option>
+         <option th:value=0>0 €</option>
+         <option th:value=10000>1-12000 €</option>
+         <option th:value=20000>12001-40000 €</option>
+         <option th:value=40001>More than 40000 €</option>
       </select></p>
    <p>
       <label for="age">Choose your age:</label>
       <select th:field="${customer.age}" name="age" id="age">
-         <option th:value=17>From 0 to 17</option>
-         <option th:value=20>From 18 to 64</option>
-         <option th:value=65>More than 64</option>
+         <option th:value=17>From 0 to 17 years</option>
+         <option th:value=20>From 18 to 64 years</option>
+         <option th:value=65>More than 64 years</option>
       </select>
    </p>
    <p>
