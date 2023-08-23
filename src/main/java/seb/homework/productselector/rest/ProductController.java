@@ -3,8 +3,8 @@ package seb.homework.productselector.rest;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import seb.homework.productselector.core.product.CustomerInfoDto;
-import seb.homework.productselector.core.verifier.ProductsSelectionAdviser;
+import seb.homework.productselector.domain.product.CustomerInfoDto;
+import seb.homework.productselector.domain.verifier.ProductsSelectionAdviser;
 
 import java.util.List;
 

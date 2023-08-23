@@ -1,4 +1,4 @@
-package seb.homework.productselector.core.product.find;
+package seb.homework.productselector.domain.product.find;
 
 import lombok.RequiredArgsConstructor;
 

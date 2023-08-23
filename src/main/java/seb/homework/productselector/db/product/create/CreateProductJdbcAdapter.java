@@ -5,8 +5,8 @@ import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
-import seb.homework.productselector.core.product.create.CreateProductDto;
-import seb.homework.productselector.core.product.create.CreateProductPort;
+import seb.homework.productselector.domain.product.create.CreateProductDto;
+import seb.homework.productselector.domain.product.create.CreateProductPort;
 
 import java.util.Map;
 

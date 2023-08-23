@@ -3,10 +3,10 @@ package seb.homework.productselector.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import seb.homework.productselector.core.product.find.FindProductPort;
-import seb.homework.productselector.core.product.find.FindProductUseCase;
-import seb.homework.productselector.core.product.find.ProductFinder;
-import seb.homework.productselector.core.verifier.ProductsSelectionAdviser;
+import seb.homework.productselector.domain.product.find.FindProductPort;
+import seb.homework.productselector.domain.product.find.FindProductUseCase;
+import seb.homework.productselector.domain.product.find.ProductFinder;
+import seb.homework.productselector.domain.verifier.ProductsSelectionAdviser;
 
 @Configuration
 public class ProductVerifierConfiguration {

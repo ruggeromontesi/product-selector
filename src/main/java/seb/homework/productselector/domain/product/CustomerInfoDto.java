@@ -1,7 +1,6 @@
-package seb.homework.productselector.core.product;
+package seb.homework.productselector.domain.product;
 
 import lombok.Builder;
-import lombok.Data;
 import lombok.Value;
 
 @Value

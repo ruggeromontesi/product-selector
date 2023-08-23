@@ -6,28 +6,80 @@
    <meta charset="UTF-8">
    <title>Customer form</title>
 </head>
+<style>
+   form {
+      display: table;
+      background-color: #def3ff;
+      border-radius: 5px;
+
+   }
+
+   p {
+      display: table-row;
+   }
+
+   label {
+      display: table-cell;
+      margin-left: 20px;
+      padding-left: 10px;
+      font-size: 1.15rem;
+   }
+
+   input {
+      display: table-cell;
+   }
+
+   select, option {
+      width: 10rem;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-left: 15px;
+      font-size: 1.15rem;
+
+   }
+
+   .submit-button {
+      width: 10rem;
+      position: relative;
+      left: 10%;
+      display: table-row;
+      background-color: lavender;
+      font-size: 1.15rem;
+   }
+
+
+</style>
 <body>
+<h2>Customer form</h2>
 <form id="customer-form"
       th:object="${customer}"
       th:action="@{/products/recommend}"
       method="post">
-   <div>
-      <label for="income">Income</label>
-      <input id="income" type="number" th:field="${customer.income}"/>
-   </div>
-   <br><br>
-   <div>
-      <label for="age">Age</label>
-      <input id="age" type="number" th:field="${customer.age}"/>
-   </div>
-   <br><br>
-   <div>
-      <label for="student">Student</label>
-      <input id="student" type="checkbox" value="yes" th:field="${customer.student}"/>
-   </div>
+   <p><label for="income">Choose your income:</label>
+      <select th:field="${customer.income}" name="income" id="income">
+         <option th:value=0>0</option>
+         <option th:value=10000>1-12000</option>
+         <option th:value=20000>12001-40000</option>
+         <option th:value=40001>More than 40000</option>
+      </select></p>
+   <p>
+      <label for="age">Choose your age:</label>
+      <select th:field="${customer.age}" name="age" id="age">
+         <option th:value=17>From 0 to 17</option>
+         <option th:value=20>From 18 to 64</option>
+         <option th:value=65>More than 64</option>
+      </select>
+   </p>
+   <p>
+      <label for="student">Are you a student</label>
+      <select th:field="${customer.student}" name="student" id="student">
+         <option th:value=false>No</option>
+         <option th:value=true>Yes</option>
+      </select>
+   </p>
    <br>
+   <p><input type="submit" value="Submit" class="submit-button"></p>
 
-   <input type="submit" value="Submit">
 </form>
 </body>
 </html>

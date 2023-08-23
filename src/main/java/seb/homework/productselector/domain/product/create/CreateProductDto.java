@@ -1,4 +1,4 @@
-package seb.homework.productselector.core.product.create;
+package seb.homework.productselector.domain.product.create;
 
 
 import lombok.Builder;

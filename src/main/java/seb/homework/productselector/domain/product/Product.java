@@ -1,8 +1,8 @@
-package seb.homework.productselector.core.product;
+package seb.homework.productselector.domain.product;
 
 import lombok.Builder;
 import lombok.Data;
-import seb.homework.productselector.core.product.find.FindProductDto;
+import seb.homework.productselector.domain.product.find.FindProductDto;
 
 @Builder
 @Data
@@ -35,7 +35,7 @@ public class Product implements ProductSuitabilityUseCase{
    }
 
    private boolean checkStudentCondition(boolean isStudent) {
-      return mustBeStudent == null || mustBeStudent == isStudent;
+      return mustBeStudent == null || !mustBeStudent || isStudent;
    }
 
    public static Product from(FindProductDto dto) {

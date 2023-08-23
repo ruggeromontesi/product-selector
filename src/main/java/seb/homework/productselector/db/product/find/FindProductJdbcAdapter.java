@@ -3,8 +3,8 @@ package seb.homework.productselector.db.product.find;
 import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import seb.homework.productselector.core.product.find.FindProductDto;
-import seb.homework.productselector.core.product.find.FindProductPort;
+import seb.homework.productselector.domain.product.find.FindProductDto;
+import seb.homework.productselector.domain.product.find.FindProductPort;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

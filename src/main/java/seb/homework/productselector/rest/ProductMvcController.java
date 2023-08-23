@@ -4,8 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import seb.homework.productselector.core.product.CustomerInfoDto;
-import seb.homework.productselector.core.verifier.ProductsSelectionAdviser;
+import seb.homework.productselector.domain.product.CustomerInfoDto;
+import seb.homework.productselector.domain.verifier.ProductsSelectionAdviser;
 
 import java.util.List;
 
