@@ -1,21 +1,22 @@
 package seb.homework.productselector.core.product.verifier;
 
+import lombok.RequiredArgsConstructor;
 import seb.homework.productselector.core.product.CustomerInfoDto;
 import seb.homework.productselector.core.product.Product;
+import seb.homework.productselector.db.product.FindProductJdbcAdapter;
 
 import java.util.List;
 
-public class ProductFinder implements ProductsProviderUseCase{
+@RequiredArgsConstructor
+public class ProductFinder implements ProductsProviderUseCase {
 
-   private final List<Product> verifiers;
-
-   public ProductFinder(List<Product> verifiers) {
-      this.verifiers = verifiers;
-   }
+   private final FindProductJdbcAdapter adapter;
 
    @Override
    public List<String> getProducts(CustomerInfoDto dto) {
-      return verifiers.stream()
+
+      List<Product> products = adapter.findAll();
+      return products.stream()
             .filter(p -> p.isUserEligible(dto))
             .map(Product::getName)
             .toList();

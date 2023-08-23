@@ -7,6 +7,7 @@ import lombok.Data;
 @Data
 public class Product implements ProductSuitabilityUseCase{
 
+   Long id;
    String name;
    Integer minAge;
    Integer maxAge;
@@ -33,6 +34,6 @@ public class Product implements ProductSuitabilityUseCase{
    }
 
    private boolean checkStudentCondition(boolean isStudent) {
-      return mustBeStudent == null? true : mustBeStudent == isStudent;
+      return mustBeStudent == null || mustBeStudent == isStudent;
    }
 }
