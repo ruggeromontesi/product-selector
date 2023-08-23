@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Customer form</title>
+</head>
+<body>
+<form id="customer-form"
+      th:object="${customer}"
+      th:action="@{/products/recommend}"
+      method="post">
+   <div>
+      <label for="income">Income</label>
+      <input id="income" type="number" th:field="${customer.income}"/>
+   </div>
+   <br><br>
+   <div>
+      <label for="age">Age</label>
+      <input id="age" type="number" th:field="${customer.age}"/>
+   </div>
+   <br><br>
+   <div>
+      <label for="student">Student</label>
+      <input id="student" type="checkbox" value="yes" th:field="${customer.student}"/>
+   </div>
+   <br>
+
+   <input type="submit" value="Submit">
+</form>
+</body>
+</html>

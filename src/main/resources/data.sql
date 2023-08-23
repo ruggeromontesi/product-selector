@@ -1,0 +1,1 @@
+INSERT INTO product(id, name, min_age, max_age, min_income, max_income, must_be_student) VALUES(1, 'Current Account', 17, null, 0, null, false)
