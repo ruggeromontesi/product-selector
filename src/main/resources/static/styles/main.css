@@ -1,5 +1,7 @@
 body {
    background-image: url("static/image/SEB_logo.png");
+   position: relative;
+   left: 40%;
 }
 
 

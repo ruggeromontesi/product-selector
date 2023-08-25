@@ -4,6 +4,6 @@ import seb.homework.productselector.domain.product.CustomerInfoDto;
 
 import java.util.List;
 
-public interface ProductsProviderUseCase {
+public interface SelectProductsUseCase {
    List<String> getProducts(CustomerInfoDto dto);
 }
