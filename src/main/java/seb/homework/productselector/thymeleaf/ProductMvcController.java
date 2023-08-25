@@ -33,7 +33,8 @@ public class ProductMvcController {
    public String recommend(Model model, CustomerInfoDto customer) {
       List<String> suitableProducts = productFinder.getProducts(customer);
       model.addAttribute("products", suitableProducts);
-      return "recommendedProducts";
+      model.addAttribute("customer", customer);
+      return "formAndRecommendedProducts";
    }
 
 

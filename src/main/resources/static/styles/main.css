@@ -18,7 +18,7 @@ p {
 
 label {
    display: table-cell;
-   margin-left: 20px;
+   margin-left: 2rem;
    padding-left: 10px;
    font-size: 1.15rem;
 }
@@ -29,9 +29,7 @@ input {
 
 select, option {
    width: 12rem;
-   margin-bottom: 20px;
-   margin-top: 20px;
-   margin-left: 15px;
+   margin: 1rem 1.5rem 1rem 2rem;
    font-size: 1.15rem;
 
 }
@@ -39,9 +37,10 @@ select, option {
 .submit-button {
    width: 10rem;
    position: relative;
-   left: 10%;
+   left: 52%;
    display: table-row;
    background-color: lavender;
    font-size: 1.15rem;
+   margin-bottom: 2rem;
 }
 
