@@ -3,7 +3,6 @@ package seb.homework.productselector.thymeleaf;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import seb.homework.productselector.domain.product.CustomerInfoDto;
 import seb.homework.productselector.domain.verifier.ProductsSelectionAdviser;
 
@@ -22,21 +21,21 @@ public class ProductMvcController {
    @GetMapping("/form")
    public String fillForm(Model model) {
 
-      CustomerInfoDto customer = CustomerInfoDto.builder().build();
+      CustomerInfoDto customer = CustomerInfoDto.builder()
+            .income(0)
+            .age(16)
+            .build();
       model.addAttribute("customer", customer);
+      model.addAttribute("products", productFinder.getProducts(customer));
 
-      return "customerForm";
+      return "recommendedProducts";
    }
 
-
-   @PostMapping("/products/recommend")
+   @GetMapping("/products/recommend")
    public String recommend(Model model, CustomerInfoDto customer) {
       List<String> suitableProducts = productFinder.getProducts(customer);
       model.addAttribute("products", suitableProducts);
       model.addAttribute("customer", customer);
-      return "formAndRecommendedProducts";
+      return "recommendedProducts";
    }
-
-
-
 }

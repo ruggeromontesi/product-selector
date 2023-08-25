@@ -5,51 +5,48 @@
 <head>
    <meta charset="UTF-8">
    <title>Customer form</title>
-   <link th:href="@{styles/main.css}" rel="stylesheet"/>
+   <link th:href="@{styles/one.css}" rel="stylesheet"/>
 </head>
-<body th:style="'background: url(/static/image/SEB_logo.png)'">
+<body>
 <h2>Customer form</h2>
-<form id="customer-form"
+<form id="a-form"
       th:object="${customer}"
       th:action="@{/products/recommend}"
       method="post">
-   <p><label for="income">Choose your income:</label>
-      <select th:field="${customer.income}" name="income" id="income">
+   <p><label for="foo" th:style="foo">Choose your income:</label>
+      <select th:field="${customer.income}" name="foo" id="foo">
          <option th:value=0>0 €</option>
          <option th:value=10000>1-12000 €</option>
          <option th:value=20000>12001-40000 €</option>
          <option th:value=40001>More than 40000 €</option>
       </select></p>
    <p>
-      <label for="age">Choose your age:</label>
-      <select th:field="${customer.age}" name="age" id="age">
+      <label for="a-age">Choose your age:</label>
+      <select th:field="${customer.age}" name="age" id="a-age">
          <option th:value=17>From 0 to 17 years</option>
          <option th:value=20>From 18 to 64 years</option>
          <option th:value=65>More than 64 years</option>
       </select>
    </p>
    <p>
-      <label for="student">Are you a student</label>
-      <select th:field="${customer.student}" name="student" id="student">
+      <label for="a-student">Are you a student</label>
+      <select th:field="${customer.student}" name="student" id="a-student">
          <option th:value=false>No</option>
          <option th:value=true>Yes</option>
       </select>
    </p>
    <br>
-   <div>
-      <table>
-         <thead>
-         <tr>
-            <th>Product</th>
-         </tr>
-         </thead>
-         <tr th:each="product : ${products}">
-            <td th:text="${product}"></td>
-         </tr>
-      </table>
-   </div>
    <p><input type="submit" value="Submit" class="submit-button"></p>
 
 </form>
+<div>
+   <table th:style="strong">
+      <thead th:color="red">
+      <tr>
+         <th>Product</th>
+      </tr>
+      </thead>
+   </table>
+</div>
 </body>
 </html>

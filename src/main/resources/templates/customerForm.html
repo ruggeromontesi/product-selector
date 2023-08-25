@@ -12,7 +12,7 @@
 <form id="customer-form"
       th:object="${customer}"
       th:action="@{/products/recommend}"
-      method="post">
+      method="get">
    <p><label for="income">Choose your income:</label>
       <select th:field="${customer.income}" name="income" id="income">
          <option th:value=0>0 €</option>
