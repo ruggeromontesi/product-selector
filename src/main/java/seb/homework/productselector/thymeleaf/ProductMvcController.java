@@ -26,7 +26,7 @@ public class ProductMvcController {
             .age(16)
             .build();
       model.addAttribute("customer", customer);
-      model.addAttribute("products", productFinder.getProducts(customer));
+      model.addAttribute("products", List.of());
 
       return "recommendedProducts";
    }
