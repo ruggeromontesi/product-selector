@@ -16,7 +16,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {CoreTestConfiguration.class})
+@ContextConfiguration(classes = {ProductTestConfiguration.class})
 class CreateProductJdbcAdapterTest {
 
    private static final String TEST_PRODUCT = "test-product";

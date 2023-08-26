@@ -18,13 +18,17 @@ import javax.sql.DataSource;
 import java.io.IOException;
 import java.util.Collections;
 
-public class CoreTestConfiguration {
+public class ProductTestConfiguration {
 
    private final String dump;
-   private final Logger logger = LoggerFactory.getLogger(CoreTestConfiguration.class);
+   private final Logger logger = LoggerFactory.getLogger(ProductTestConfiguration.class);
 
-   public CoreTestConfiguration(String dump) {
+   public ProductTestConfiguration(String dump) {
       this.dump = dump;
+   }
+
+   public ProductTestConfiguration() {
+      this("/dump.sql");
    }
 
    @Bean("flyway")
