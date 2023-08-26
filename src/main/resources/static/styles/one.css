@@ -1,21 +1,26 @@
+/*body {*/
+/*   background-color: lightblue;*/
+
+/*}*/
+
+
+
 body {
+   /*background-image: url("static/image/SEB_logo.png");*/
+   /*background: url("static/image/SEB_logo.png");*/
    background-color: lightblue;
+   position: relative;
+   left: 35%;
 
 }
 
+
 div {
-   border: red;
+   border: black;
 
    font-size: 20px;
    color: red;
 }
-
-body {
-   background-image: url("static/image/SEB_logo.png");
-   position: relative;
-   left: 35%;
-}
-
 
 form {
    width: 30rem;
@@ -23,6 +28,7 @@ form {
    background-color: #def3ff;
    border-radius: 5px;
    align-content: center;
+   margin-bottom: 2rem;
 
 }
 
@@ -79,4 +85,5 @@ tr {
 td {
    border :1px solid;
    text-align: center;
+   color : red;
 }

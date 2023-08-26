@@ -36,18 +36,18 @@
       </select>
    </p>
    <br>
-   <p><input type="submit" value="Submit" class="submit-button"></p>
+   <p><input type="submit" value="Submit"  class="submit-button"></p>
 
 </form>
 <div>
-   <table th:style="strong">
+   <table th:hidden="${products.isEmpty()}">
       <thead>
-      <tr>
+      <tr >
          <th>List of suitable products</th>
       </tr>
       </thead>
       <tr th:each="product : ${products}">
-         <td th:text="${product}"></td>
+         <td th:text="${product}" ></td>
       </tr>
    </table>
 </div>
