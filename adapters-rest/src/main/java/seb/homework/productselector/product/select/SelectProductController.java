@@ -2,7 +2,6 @@ package seb.homework.productselector.product.select;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import seb.homework.productselector.product.CustomerInfoDto;
 import seb.homework.productselector.verifier.ProductsSelectionAdviser;
@@ -19,7 +18,7 @@ public class SelectProductController {
       this.productFinder = productFinder;
    }
 
-   @RequestMapping(value = {"/select/age/{age}/income/{income}/student/{student}", "/select/age/{age}/income/{income}"})
+   @GetMapping(value = {"/select/age/{age}/income/{income}/student/{student}", "/select/age/{age}/income/{income}"})
    public List<String> selectProducts(@PathVariable Map<String, String> pathVariablesMap) {
       return productFinder.getProducts(toDto(pathVariablesMap));
    }
