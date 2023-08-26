@@ -29,6 +29,4 @@ public class FindProductJdbcAdapter implements FindProductPort {
             .mustBeStudent(rs.getBoolean("must_be_student"))
             .build();
    }
-
-
 }
