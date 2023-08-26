@@ -29,7 +29,7 @@ public class CreateProductJdbcAdapter implements CreateProductPort {
       params = new HashMap<>();
       StringBuilder valuesPart = new StringBuilder(" VALUES (:name");
 
-      StringBuilder insertPart = new StringBuilder("INSERT INTO product(name");
+      StringBuilder insertPart = new StringBuilder("INSERT INTO PRODUCT (name");
       params.put("name", product.getName());
       if (product.getMinAge() != null) {
          params.put("min_age", product.getMinAge());
