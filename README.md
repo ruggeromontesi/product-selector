@@ -14,9 +14,10 @@
 4) Build project mvn clean install -f pom.xml
 5) Run the project mvn spring-boot:run
 
-#Start page is available at localhost:8080/form
+# Start page is available at localhost:8080/form
 
-#How to load  a new product:
+
+# How to load  a new product:
 
 USE METHOD POST.
 endpoint http://localhost:8080/product/create
@@ -28,3 +29,15 @@ json body:
     "maxAge":64,
     "minIncome": 4000
 }
+
+cURL: 
+curl --location 'http://localhost:8080/product/create' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name":"test product 8",
+    "minAge": 18,
+    "maxAge":64,
+    "minIncome": 4000,
+    "maxIncome" : 7800,
+    "mustBeStudent": true
+}'
