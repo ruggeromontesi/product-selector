@@ -21,13 +21,13 @@ public class ValidationUtils {
 
    public static void assertNotNegativeInteger(Integer integer, String propertyName, String message) throws DomainException {
       if (integer != null && integer < 0) {
-         throw new DomainException(message, propertyName);
+         throw new DomainException(propertyName, message);
       }
    }
 
    public static void assertBiggerThan(Integer bigger, Integer smaller, String propertyNameBigger, String propertyNameSmaller) throws DomainException {
       if (bigger != null && smaller != null && smaller > bigger) {
-         throw new DomainException(propertyNameBigger + " must be bigger then " + propertyNameSmaller, propertyNameBigger + ", " + propertyNameSmaller);
+         throw new DomainException(propertyNameBigger + ", " + propertyNameSmaller, propertyNameBigger + " must be bigger then " + propertyNameSmaller);
       }
    }
 

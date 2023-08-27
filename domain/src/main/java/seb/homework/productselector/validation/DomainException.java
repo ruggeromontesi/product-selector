@@ -6,7 +6,7 @@ import lombok.Getter;
 public class DomainException extends RuntimeException {
    private final String propertyName;
 
-   public DomainException(String message, String propertyName) {
+   public DomainException(String propertyName, String message) {
       super(message);
       this.propertyName = propertyName;
    }
