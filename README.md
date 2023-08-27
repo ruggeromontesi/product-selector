@@ -15,3 +15,16 @@
 5) Run the project mvn spring-boot:run
 
 #Start page is available at localhost:8080/form
+
+#How to load  a new product:
+
+USE METHOD POST.
+endpoint http://localhost:8080/product/create
+
+json body:
+{
+    "name":"test product 2",
+    "minAge": 8,
+    "maxAge":64,
+    "minIncome": 4000
+}
