@@ -16,7 +16,9 @@
 
 # Start page
  is available at localhost:8080/form
+ 
  Credentials:
+ 
  user:ruggero
  password:montesi
 
@@ -34,7 +36,7 @@ json body:
     "minIncome": 4000
 }
 
-cURL: 
+# cURL: 
 curl -u ruggero:montesi --location 'http://localhost:8080/product/create' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -45,3 +47,7 @@ curl -u ruggero:montesi --location 'http://localhost:8080/product/create' \
     "maxIncome" : 37800,
     "mustBeStudent": true
 }'
+
+# postman
+a collection of calls is available in 
+ /product-selector/postman-collection folder
