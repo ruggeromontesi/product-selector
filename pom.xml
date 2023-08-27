@@ -19,6 +19,8 @@
       <testcontainers.version>1.17.3</testcontainers.version>
       <sonar.organization>ruggeromontesi</sonar.organization>
       <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+      <sonar.projectKey>ruggeromontesi_product-selector</sonar.projectKey>
+      <sonar.organization>Ruggero Montesi</sonar.organization>
    </properties>
    <dependencies>
       <dependency>
