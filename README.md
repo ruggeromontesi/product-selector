@@ -28,3 +28,15 @@ json body:
     "maxAge":64,
     "minIncome": 4000
 }
+
+cURL: 
+curl --location 'http://localhost:8080/product/create' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name":"test product 8",
+    "minAge": 18,
+    "maxAge":64,
+    "minIncome": 4000,
+    "maxIncome" : 7800,
+    "mustBeStudent": true
+}'
