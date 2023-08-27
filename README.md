@@ -14,7 +14,11 @@
 4) Build project mvn clean install -f pom.xml
 5) Run the project mvn spring-boot:run
 
-# Start page is available at localhost:8080/form
+# Start page
+ is available at localhost:8080/form
+ Credentials:
+ user:ruggero
+ password:montesi
 
 
 # How to load  a new product:
@@ -31,13 +35,13 @@ json body:
 }
 
 cURL: 
-curl --location 'http://localhost:8080/product/create' \
+curl -u ruggero:montesi --location 'http://localhost:8080/product/create' \
 --header 'Content-Type: application/json' \
 --data '{
     "name":"test product 8",
     "minAge": 18,
     "maxAge":64,
-    "minIncome": 4000,
-    "maxIncome" : 7800,
+    "minIncome": 14000,
+    "maxIncome" : 37800,
     "mustBeStudent": true
 }'
