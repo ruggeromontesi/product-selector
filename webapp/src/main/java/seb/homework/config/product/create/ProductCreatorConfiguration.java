@@ -1,4 +1,4 @@
-package com.seb.homework.config.product.create;
+package seb.homework.config.product.create;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

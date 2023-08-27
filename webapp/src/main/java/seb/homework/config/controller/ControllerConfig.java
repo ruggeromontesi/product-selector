@@ -1,4 +1,4 @@
-package com.seb.homework.config.controller;
+package seb.homework.config.controller;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.seb.homework.config.rest;
+package seb.homework.config.rest;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

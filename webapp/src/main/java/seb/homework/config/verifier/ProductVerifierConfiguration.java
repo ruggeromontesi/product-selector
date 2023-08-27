@@ -1,4 +1,4 @@
-package com.seb.homework.config.verifier;
+package seb.homework.config.verifier;
 
 
 import org.springframework.context.annotation.Bean;
