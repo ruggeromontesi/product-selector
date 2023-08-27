@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Recommended Products</title>
+   <link th:href="@{/styles/one.css}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<br>
+<br>
+<h2>Customer form</h2>
+<form id="customer-form"
+      th:object="${customer}"
+      th:action="@{/products/recommend}"
+      method="get">
+   <p><label for="income">Choose your income:</label>
+      <select th:field="${customer.income}" name="income" id="income">
+         <option th:value=0>0 €</option>
+         <option th:value=10000>1-12000 €</option>
+         <option th:value=20000>12001-40000 €</option>
+         <option th:value=40001>More than 40000 €</option>
+      </select></p>
+   <p>
+      <label for="age">Choose your age:</label>
+      <select th:field="${customer.age}" name="age" id="age">
+         <option th:value=17>from 0 to 17 years</option>
+         <option th:value=20>from 18 to 64 years</option>
+         <option th:value=65>more than 64 years</option>
+      </select>
+   </p>
+   <p>
+      <label for="student">Are you a student</label>
+      <select th:field="${customer.student}" name="student" id="student">
+         <option th:value=false>No</option>
+         <option th:value=true>Yes</option>
+      </select>
+   </p>
+   <br>
+   <p><input type="submit" value="Submit"  class="submit-button"></p>
+
+</form>
+<div>
+   <table th:hidden="${products.isEmpty()}">
+      <caption>Suitable products for the given input</caption>
+      <thead>
+      <tr >
+         <th>List of suitable products</th>
+      </tr>
+      </thead>
+      <tr th:each="product : ${products}">
+         <td th:text="${product}" ></td>
+      </tr>
+   </table>
+</div>
+</body>
+</html>
