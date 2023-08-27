@@ -1,12 +1,12 @@
 package seb.homework.productselector.product;
 
 import lombok.Builder;
-import lombok.Data;
+import lombok.Value;
 import seb.homework.productselector.product.find.FindProductDto;
 
 @Builder
-@Data
-public class Product implements ProductSuitabilityUseCase{
+@Value
+public class Product implements ProductSuitabilityUseCase {
 
    Long id;
    String name;
