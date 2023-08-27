@@ -14,11 +14,10 @@
 4) Build project mvn clean install -f pom.xml
 5) Run the project mvn spring-boot:run
 
-#Start page is available at localhost:8080/form
+# Start page is available at localhost:8080/form
 
-###########################
 
-#How to load  a new product:
+# How to load  a new product:
 
 USE METHOD POST.
 endpoint http://localhost:8080/product/create
