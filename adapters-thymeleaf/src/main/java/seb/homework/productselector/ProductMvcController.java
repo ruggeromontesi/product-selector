@@ -17,7 +17,7 @@ public class ProductMvcController {
       this.productFinder = productFinder;
    }
 
-   @GetMapping("/form")
+   @GetMapping(value = {"/form", "/"})
    public String fillForm(Model model) {
 
       CustomerInfoDto customer = CustomerInfoDto.builder()
@@ -38,3 +38,4 @@ public class ProductMvcController {
       return "recommendedProducts";
    }
 }
+

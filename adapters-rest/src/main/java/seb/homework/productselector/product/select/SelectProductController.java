@@ -34,9 +34,4 @@ public class SelectProductController {
             .student(student)
             .build();
    }
-
-   @GetMapping("/mah")
-   public String boh() {
-      return "mah";
-   }
 }

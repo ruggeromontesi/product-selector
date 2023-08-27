@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
 <head>
    <meta charset="UTF-8">
    <title>Recommended Products</title>
-   <link th:href="@{/styles/one.css}" rel="stylesheet" type="text/css"/>
+   <link th:href="@{/styles/main.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <br>
@@ -41,7 +41,6 @@
 </form>
 <div>
    <table th:hidden="${products.isEmpty()}">
-      <caption>Suitable products for the given input</caption>
       <thead>
       <tr >
          <th>List of suitable products</th>

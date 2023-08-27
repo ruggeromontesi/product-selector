@@ -1,17 +1,8 @@
-/*body {*/
-/*   background-color: lightblue;*/
-
-/*}*/
-
-
 
 body {
-   /*background-image: url("static/image/SEB_logo.png");*/
-   /*background: url("static/image/SEB_logo.png");*/
-   background-color: lightblue;
    position: relative;
    left: 35%;
-
+   background: #ecf3ff;
 }
 
 
@@ -25,7 +16,7 @@ div {
 form {
    width: 30rem;
    display: table;
-   background-color: #def3ff;
+   background-color: #87b6c0;
    border-radius: 5px;
    align-content: center;
    margin-bottom: 2rem;
@@ -72,18 +63,19 @@ table {
    border-radius: 5px;
    width: 30rem;
    border: 2px solid;
-   color : black;
+   color: black;
 }
+
 th {
-   border :1px solid;
+   border: 1px solid;
 }
 
 tr {
-   border :1px solid;
+   border: 1px solid;
 }
 
 td {
-   border :1px solid;
+   border: 1px solid;
    text-align: center;
-   color : black;
+   color: black;
 }
