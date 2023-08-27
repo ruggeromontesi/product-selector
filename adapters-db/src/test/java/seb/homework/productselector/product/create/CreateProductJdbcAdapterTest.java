@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,6 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = {ProductTestConfiguration.class})
+@EnableAutoConfiguration
 class CreateProductJdbcAdapterTest {
 
    private static final String TEST_PRODUCT = "test-product";
@@ -95,4 +97,5 @@ class CreateProductJdbcAdapterTest {
 
       jdbc.update(sql, new MapSqlParameterSource(params));
    }
+
 }
