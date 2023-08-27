@@ -1,0 +1,94 @@
+{
+	"info": {
+		"_postman_id": "d9d76fad-619f-459f-bd6c-c21dbfaf8a89",
+		"name": "product-selector",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14639313"
+	},
+	"item": [
+		{
+			"name": "list -suitable-products",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "montesi",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ruggero",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/select/age/10/income/30000/student/true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"select",
+						"age",
+						"10",
+						"income",
+						"30000",
+						"student",
+						"true"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new product",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "montesi",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ruggero",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\":\"test product 2\",\r\n \"minAge\": 17,\r\n  \"maxAge\":64,\r\n   \"minIncome\": 14000 \r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
