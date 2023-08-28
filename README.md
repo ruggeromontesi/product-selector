@@ -1,6 +1,6 @@
 # How to run product-selector (Intellij)
 1) Open command prompt from <YOUR FOLDER>
-2) Clone from repote repository typing : git clone  https://github.com/ruggeromontesi/product-selector.git
+2) Clone from remote repository typing : git clone  https://github.com/ruggeromontesi/product-selector.git
 3) Open project with intellij : File/open/ select folder <YOUR FOLDER>/product-selector
 4) Build
 5) Run the application using configuration located in ./run : ProductSelectorApplication.run.xml
